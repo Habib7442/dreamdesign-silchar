@@ -133,8 +133,10 @@ export default function Home() {
                   Our mission is to provide high-quality, durable, and aesthetic home solutions while maintaining fair pricing and professional transparency in Silchar.
                 </p>
               </div>
-              <Button variant="link" className="mt-10 px-0 text-lg font-medium group underline decoration-primary underline-offset-8 decoration-2">
-                Learn More <ArrowUpRight className="ml-2 h-5 w-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+              <Button asChild variant="link" className="mt-10 px-0 text-lg font-medium group underline decoration-primary underline-offset-8 decoration-2">
+                <Link href="/about">
+                  Learn More <ArrowUpRight className="ml-2 h-5 w-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </Button>
             </motion.div>
           </div>
