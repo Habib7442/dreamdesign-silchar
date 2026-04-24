@@ -97,9 +97,11 @@ export default function Navbar() {
   );
 
   return (
+    <>
     <header 
       className={cn(
-        "fixed top-0 z-50 w-full transition-all duration-500 py-4",
+        "fixed top-0 w-full transition-all duration-500 py-4",
+        isOpen ? "z-[1000]" : "z-50",
         scrolled 
           ? "bg-white/90 dark:bg-black/90 backdrop-blur-xl border-b py-3 shadow-md" 
           : "bg-transparent py-6"
@@ -113,7 +115,7 @@ export default function Navbar() {
               alt="Dream Design Silchar Official Logo" 
               width={48} 
               height={48} 
-              style={{ height: '48px', width: 'auto' }}
+              style={{ width: 'auto', height: 'auto' }}
               className="object-contain group-hover:scale-110 transition-transform duration-500" 
             />
           </div>
@@ -198,8 +200,9 @@ export default function Navbar() {
             </Button>
           </div>
       </div>
+    </header>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Outside header to avoid stacking context issues */}
       <AnimatePresence>
         {isOpen && (
           <motion.div 
@@ -207,7 +210,8 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-[999] bg-white dark:bg-zinc-950 flex flex-col p-8 md:hidden shadow-2xl"
+            className="fixed inset-0 z-[9999] bg-white dark:bg-zinc-950 flex flex-col p-8 md:hidden"
+            style={{ backgroundColor: 'white' }}
           >
             <div className="flex justify-between items-center mb-16 border-b border-zinc-100 dark:border-zinc-900 pb-8">
               <div className="flex flex-col leading-none">
@@ -268,7 +272,7 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
 

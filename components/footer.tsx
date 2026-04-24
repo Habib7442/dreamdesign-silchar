@@ -106,7 +106,14 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-zinc-100 dark:border-zinc-900 gap-8">
           <div className="flex items-center gap-4">
             <Link href="/" className="flex items-center space-x-2">
-              <Image src="/logo.png" alt="Dream Design Silchar" width={32} height={32} className="rounded-sm" />
+              <Image 
+                src="/logo.png" 
+                alt="Dream Design Silchar" 
+                width={32} 
+                height={32} 
+                style={{ width: 'auto', height: 'auto' }}
+                className="rounded-sm" 
+              />
               <span className="font-heading font-bold text-xl">Dream Design</span>
             </Link>
           </div>

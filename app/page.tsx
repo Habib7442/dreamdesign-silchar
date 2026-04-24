@@ -40,7 +40,7 @@ const services = [
 const processSteps = [
   { id: "01", title: "Consultation and Discovery", desc: "We start by understanding your space, goals, and requirements. This step helps define the scope and vision.", image: "/projects/1.jpeg" },
   { id: "02", title: "Planning & Design", desc: "Once the vision is clear, we create detailed plans and 3D designs for your approval.", image: "/projects/3.jpeg" },
-  { id: "03", title: "Execution and Coordination", desc: "Our skilled team manages the construction and installation with meticulous attention to detail.", image: "/projects/2.jpeg" },
+  { id: "03", title: "Execution and Coordination", desc: "Our skilled team manages the construction and installation with meticulous attention to detail.", image: "/projects/14.jpeg" },
   { id: "04", title: "Final Styling and Delivery", desc: "The final stage focuses on finishing touches to ensure the space aligns with the original vision.", image: "/projects/4.png" },
 ];
 
@@ -79,6 +79,64 @@ export default function Home() {
               </Button>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Cinematic Showcase Video */}
+      <section className="py-24 bg-white dark:bg-black overflow-hidden">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <p className="uppercase tracking-[0.4em] text-xs font-bold text-zinc-400 mb-4">Vision in Motion</p>
+            <h2 className="text-4xl md:text-6xl font-heading font-medium">Crafting <span className="italic">Experiences</span></h2>
+          </div>
+          <motion.div 
+            {...fadeIn}
+            className="relative aspect-video rounded-[2rem] overflow-hidden shadow-2xl shadow-primary/10 border border-zinc-100 dark:border-zinc-900"
+          >
+            <video 
+              src="/ad_video.mp4" 
+              loop 
+              playsInline 
+              controls
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-black/10 pointer-events-none" />
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Featured Projects - New Section (Top 10 Masterpieces) */}
+      <section className="py-24 bg-white dark:bg-black">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center text-center mb-16 gap-8">
+            <div>
+              <p className="uppercase tracking-[0.4em] text-xs font-bold text-zinc-400 mb-4">Portfolio</p>
+              <h2 className="text-4xl md:text-6xl font-heading font-medium">Selected <br /><span className="italic uppercase">Masterpieces</span></h2>
+            </div>
+            <Button asChild variant="outline" className="rounded-full border-zinc-200 dark:border-zinc-800 px-10 h-14 hover:bg-zinc-100 dark:hover:bg-zinc-900 transition-all uppercase tracking-widest text-xs font-bold">
+              <Link href="/portfolio" className="flex items-center gap-2">
+                View All Projects <ArrowUpRight className="h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {["1.jpeg", "2.png", "4.jpeg", "5.jpeg", "8.jpeg", "12.jpeg", "20.jpeg", "25.jpeg", "28.jpeg", "23.jpeg", "15.jpeg"].map((img, i) => (
+              <motion.div
+                key={i}
+                {...fadeIn}
+                className={`relative overflow-hidden rounded-[2rem] group cursor-pointer ${i === 0 ? "md:col-span-2 md:aspect-[16/9]" : "aspect-[3/4]"}`}
+              >
+                <Image
+                  src={`/projects/${img}`}
+                  alt={`Dream Design Featured Project ${img}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                />
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -250,6 +308,7 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Testimonials (Optional) */}
       <section className="py-32">
         <div className="container mx-auto px-4 text-center">
@@ -259,7 +318,7 @@ export default function Home() {
              <div className="flex gap-1 mb-4 text-yellow-500">
                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-current" />)}
              </div>
-             <p className="font-bold text-xl">Nivster</p>
+             <p className="font-bold text-xl">Rahul</p>
              <p className="text-zinc-500 uppercase tracking-widest text-xs mt-1">Verified Client</p>
           </div>
         </div>
