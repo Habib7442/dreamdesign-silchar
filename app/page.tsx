@@ -68,7 +68,7 @@ export default function Home() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="max-w-5xl mx-auto"
           >
-            <h1 className="text-6xl md:text-6xl lg:text-8xl font-heading font-medium text-white mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-medium text-white mb-8 leading-[1.1] tracking-tight">
               Interior Design for <br />
               <span className="text-white font-bold italic">Modern Living</span>
             </h1>
@@ -101,6 +101,7 @@ export default function Home() {
               loop 
               playsInline 
               controls
+              poster="/projects/1.jpeg"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/10 pointer-events-none" />

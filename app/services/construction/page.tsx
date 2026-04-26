@@ -101,7 +101,7 @@ export default function ConstructionPage() {
 
           <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl group">
              <Image
-                src="/projects/3.png"
+                src="/projects/3.jpeg"
                 alt="Residential Building Construction Excellence by Dream Design Silchar"
                 fill
                 sizes="(max-width: 768px) 100vw, 80vw"
