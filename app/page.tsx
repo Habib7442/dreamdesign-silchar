@@ -55,7 +55,7 @@ export default function Home() {
             src="/hero_bg.png"
             alt="Modern Living Room Interior Design Silchar"
             fill
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 100vw"
             className="object-cover brightness-[0.6]"
             priority
           />
