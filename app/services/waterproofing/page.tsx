@@ -61,7 +61,7 @@ export default function WaterproofingPage() {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 backdrop-blur-md mb-6 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-primary text-xs font-bold tracking-widest uppercase">Permanent Leakage Solutions</span>
           </div>
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-heading font-bold mb-6 leading-[1.1] animate-in fade-in slide-in-from-bottom-6 duration-1000">
             Waterproofing <br />
             <span className="text-primary italic font-light">With Perfection</span>
           </h1>
