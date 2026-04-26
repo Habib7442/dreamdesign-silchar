@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Separator } from "@/components/ui/separator";
 import { Phone, Mail, MapPin, ArrowUpRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 
@@ -118,18 +117,33 @@ export default function Footer() {
             </Link>
           </div>
           
-          <div className="flex space-x-8">
-            <Link href="#" className="hover:opacity-80 transition-opacity">
-              <Image src="/social-icons/instagram.png" alt="Instagram" width={20} height={20} />
+          <div className="flex space-x-8 items-center">
+            <Link href="https://www.facebook.com/dilip.das.908132" target="_blank" className="hover:opacity-80 transition-opacity">
+              <Image 
+                src="/social-icons/facebook.png" 
+                alt="Facebook" 
+                width={20} 
+                height={20} 
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity">
-              <Image src="/social-icons/linkedin.png" alt="LinkedIn" width={20} height={20} />
+            <Link href="#" target="_blank" className="hover:opacity-80 transition-opacity">
+              <Image 
+                src="/social-icons/instagram.png" 
+                alt="Instagram" 
+                width={20} 
+                height={20} 
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </Link>
-            <Link href="#" className="hover:opacity-80 transition-opacity">
-              <Image src="/social-icons/X.png" alt="X" width={20} height={20} className="dark:invert" />
-            </Link>
-            <Link href="https://wa.me/919854382525" className="hover:opacity-80 transition-opacity">
-              <Image src="/social-icons/whatsapp.png" alt="WhatsApp" width={20} height={20} />
+            <Link href="https://wa.me/919854382525" target="_blank" className="hover:opacity-80 transition-opacity">
+              <Image 
+                src="/social-icons/whatsapp.png" 
+                alt="WhatsApp" 
+                width={20} 
+                height={20} 
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </Link>
           </div>
 

@@ -73,9 +73,12 @@ export default function Home() {
               <span className="text-white font-bold italic">Modern Living</span>
             </h1>
             
-            <div className="flex flex-col items-center mt-12">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-12">
               <Button size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90 px-10 h-16 text-lg font-bold shadow-xl shadow-primary/20" asChild>
                 <Link href="/contact">Book Now</Link>
+              </Button>
+              <Button size="lg" variant="outline" className="rounded-full border-white text-white hover:bg-white/10 px-10 h-16 text-lg font-bold backdrop-blur-sm transition-all" asChild>
+                <Link href="tel:+919854382525">Call Now</Link>
               </Button>
             </div>
           </motion.div>
