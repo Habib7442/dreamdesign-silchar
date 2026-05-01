@@ -18,6 +18,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dreamdesignsilchar.com'),
+  alternates: {
+    canonical: '/',
+  },
   title: "Dream Design Silchar | Top Interior Designers & Civil Contractors",
   description:
     "Dream Design Silchar offers professional interior design, modular kitchens, civil construction, painting, and waterproofing services in Silchar since 2007. Led by Mr. Dilip Das.",
